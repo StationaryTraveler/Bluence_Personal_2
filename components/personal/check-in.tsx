@@ -1,0 +1,23 @@
+import {useState} from 'react';
+import {Check,ArrowRight,MessageCircle,MinusCircle} from 'lucide-react';
+import {displayDate,periodRecords,periodTotal,type Action,type Journey,type CheckInDraft} from '../../lib/personal/domain';
+export type CheckInEditorProps={state:Journey;action:Action;today:string;initial?:CheckInDraft;onDraft:(draft:CheckInDraft)=>Promise<boolean>;onSave:(draft:CheckInDraft)=>Promise<boolean>;onCancel:()=>Promise<boolean>;onClose:()=>void};
+/** Shared P3 interaction. Today uses this component; it owns no separate activity records. */
+export function CheckInEditor({state,action,today,initial,onDraft,onSave,onCancel,onClose}:CheckInEditorProps){
+ const [draft,setDraft]=useState<CheckInDraft>(initial||{actionId:action.id,periodStart:action.periodStart,periodEnd:action.periodEnd,occurredOn:today,outcome:'activity',quantity:1});
+ const [busy,setBusy]=useState(false),[error,setError]=useState(''),[draftStatus,setDraftStatus]=useState('');
+ const update=(patch:Partial<CheckInDraft>)=>{const value={...draft,...patch};setDraft(value);setError('');setDraftStatus('Saving draft…');void onDraft(value).then(ok=>setDraftStatus(ok?'Draft saved in this browser.':'Draft not saved. Your input is still here.'));};
+ const submit=async(e:React.FormEvent)=>{e.preventDefault();if(busy)return;if(draft.outcome==='activity'&&(!Number.isInteger(draft.quantity)||draft.quantity!<1)){setError('Enter the number of occurrences you want to record.');return;}setBusy(true);const ok=await onSave(draft);setBusy(false);if(ok)onClose();else setError('Not recorded. Your input is still here; retry when ready.');};
+ const existing=periodRecords(state,action);
+ return <form className="t-checkin" onSubmit={submit}>
+  <div className="t-context"><span>{initial?.editId?'CORRECT A RECORD':'CHECK IN'}</span><strong>{action.title}</strong><p>{displayDate(draft.periodStart)}–{displayDate(draft.periodEnd,{year:'numeric'})}</p></div>
+  <div className="t-record-summary"><Check size={18}/><span>{existing.length?`${periodTotal(state,action)} ${action.unit} recorded for this period.`:'No activity reported for this period yet.'}</span></div>
+  <fieldset><legend>What would you like to record?</legend><div className="t-outcomes">{([['activity','Report activity',Check],['not-done','Did not do this',MinusCircle],['obstacle','An obstacle',MessageCircle]] as const).map(([value,label,Icon])=><label key={value} className={draft.outcome===value?'selected':''}><input type="radio" name="outcome" value={value} checked={draft.outcome===value} onChange={()=>update({outcome:value})}/><Icon size={18}/>{label}</label>)}</div></fieldset>
+  <div className="t-field-pair"><label>Date<input type="date" min={draft.periodStart} max={today<draft.periodEnd?today:draft.periodEnd} required value={draft.occurredOn} onChange={e=>update({occurredOn:e.target.value})}/></label>{draft.outcome==='activity'&&<label>Number of {action.unit}<input type="number" min="1" max="1000" step="1" required value={draft.quantity??''} onChange={e=>update({quantity:e.target.value===''?undefined:Number(e.target.value)})}/></label>}</div>
+  {draft.outcome==='obstacle'&&<label>What got in the way? <span className="t-muted">Optional · keep it brief</span><textarea value={draft.obstacle||''} maxLength={500} placeholder="For example, the route did not feel safe." onChange={e=>update({obstacle:e.target.value})}/></label>}
+  {draft.outcome==='activity'&&<label>Note <span className="t-muted">Optional</span><textarea value={draft.note||''} maxLength={500} placeholder="Anything you would like to remember." onChange={e=>update({note:e.target.value})}/></label>}
+  <p className="t-muted">{draft.editId?'This corrects the selected report and keeps its earlier version in the record history.':'This records what happened. It does not change your footprint estimate.'}</p>
+  <div aria-live="polite" className="t-save-status">{draftStatus}</div>{error&&<p className="t-error" role="alert">{error}</p>}
+  <div className="t-dialog-actions"><button type="button" className="t-text-button" disabled={busy} onClick={async()=>{setBusy(true);const ok=await onCancel();setBusy(false);if(ok)onClose();}}>Cancel</button><button type="button" className="t-button secondary" onClick={async()=>{setBusy(true);const ok=await onDraft(draft);setBusy(false);if(ok)onClose();else setError('Your draft could not be saved. Keep this window open and retry.');}} disabled={busy}>Save draft & close</button><button className="t-button" disabled={busy}>{busy?'Saving…':draft.editId?'Save correction':'Save check-in'}<ArrowRight size={17}/></button></div>
+ </form>;
+}

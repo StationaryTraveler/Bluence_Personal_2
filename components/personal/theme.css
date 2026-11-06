@@ -1,0 +1,25 @@
+/* Bluence_Personal_Design_System_V1.0: appearance only, scoped away from Welcome. */
+.t-header-tools{display:flex;align-items:center;gap:12px}.t-theme-toggle{color:var(--t-muted);border-color:var(--t-border)}
+.t-brand.copilot-brand{height:64px;overflow:hidden;position:relative}.t-brand.copilot-brand img{width:215px;max-width:none;height:auto;position:absolute;top:-25px;left:-4px}
+html[data-personal-theme=light] :is(.t-shell,.t-dialog){--t-bg:#F4F6E9;--t-surface:#fff;--t-soft:#F7F8EE;--t-border:#25172c20;--t-text:#25172C;--t-muted:#716878;--t-olive:#596b17;--t-aqua:#08765f;color-scheme:light}
+html[data-personal-theme=light] .t-header{background:#FCFDF7}
+html[data-personal-theme=light] :is(.t-nav a:hover,.t-account-menu button:hover,.t-account-menu a:hover){background:#EDF1D8;color:#25172c}
+html[data-personal-theme=light] :is(.t-account-menu,.t-preview-select select){background:#fff;border-color:var(--t-border);color:var(--t-text)}
+html[data-personal-theme=light] :is(.t-preview,.t-count,.t-empty,.t-context,.t-restart,.t-reminder-invite,.t-alternative,.t-outcomes label,.t-improve,.t-icon-button){border-color:var(--t-border);background:#ffffff55;color:var(--t-muted)}
+html[data-personal-theme=light] .t-next{background:linear-gradient(110deg,#fff,#EDF1D8);border-color:var(--t-border)}
+html[data-personal-theme=light] .t-button:not(.secondary){background:#D9EC74;border-color:#9aaa45;color:#25172c!important}
+html[data-personal-theme=light] .t-button.secondary{background:#fff;border-color:#25172c35;color:var(--t-text)!important}
+html[data-personal-theme=light] :is(.t-next .t-text-button,.t-suggestion-links .t-text-button,.t-edit-record){color:#596b17!important}
+html[data-personal-theme=light] :is(.t-eyebrow,.t-date,.t-date small,.t-status small,.t-status button div>span,.t-status-icon,.t-action-period,.t-activity,.t-activity strong,.t-activity small,.t-tags span,.t-muted,.t-improve>div,.t-footer>span,.t-footer small,.t-footer nav button,.t-footer>p,.t-restart,.t-month-summary span,.t-save-status,.t-history-row small,.t-context-chip){color:var(--t-muted)}
+html[data-personal-theme=light] .t-small{color:var(--t-muted)!important}
+html[data-personal-theme=light] :is(.t-category,.t-review-number,.t-month-summary strong,.t-context>span,.t-suggestion .t-eyebrow){color:#596b17}
+html[data-personal-theme=light] .t-state{color:#742785;border-color:#74278533;background:#74278509}
+html[data-personal-theme=light] :is(.t-state.doing,.t-record-summary,.t-feedback){color:#166745;background:#24c9a50d;border-color:#16674544}
+html[data-personal-theme=light] .t-feedback>.t-text-button{color:#166745!important}
+html[data-personal-theme=light] .t-error{color:#9c2037!important;background:#ff637811;border-color:#9c203744}
+html[data-personal-theme=light] .t-dialog{background:#fff!important;border-color:#25172c30!important}
+html[data-personal-theme=light] .t-dialog :is(input:not([type=radio]),select,textarea){background:#F7F8EE!important;color:#25172C!important;border-color:#25172c35!important;color-scheme:light}
+html[data-personal-theme=light] :is(.t-dialog>p,.t-icon-button){color:var(--t-muted)}
+html[data-personal-theme=light] .t-outcomes label.selected{background:#EDF1D8;border-color:#596b17;color:#596b17}
+@media(max-width:1050px){.t-brand.copilot-brand img{width:185px;top:-18px}}
+@media(max-width:760px){.t-brand.copilot-brand img{width:170px;top:-14px}.t-header-tools{gap:7px}html[data-personal-theme=light] .t-nav{background:#FCFDF7f5;border-color:#25172c20}}
