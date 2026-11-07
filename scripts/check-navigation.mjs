@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import {rememberEntry,ENTRY_KEY,routes} from '../lib/journey.ts';
+const data=new Map();
+globalThis.sessionStorage={getItem:key=>data.get(key)??null,setItem:(key,value)=>data.set(key,value)};
+data.set('existing-assessment','retain-me');
+data.set(ENTRY_KEY,JSON.stringify({futureField:'retain-this-too'}));
+rememberEntry(routes.estimate,routes.welcome);
+const saved=JSON.parse(data.get(ENTRY_KEY));
+assert.equal(saved.futureField,'retain-this-too');
+assert.equal(saved.destination,routes.estimate);
+assert.equal(data.get('existing-assessment'),'retain-me');
+data.set(ENTRY_KEY,'unreadable-existing-record');
+rememberEntry(routes.signIn,routes.welcome);
+assert.equal(data.get(ENTRY_KEY),'unreadable-existing-record');
+globalThis.sessionStorage={getItem:()=>{throw Error('storage blocked')}};
+assert.doesNotThrow(()=>rememberEntry(routes.estimate,routes.welcome));
+console.log('Navigation context checks passed: existing data retained, corrupt records not overwritten, blocked storage safe.');
