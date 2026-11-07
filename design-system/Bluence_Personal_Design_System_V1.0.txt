@@ -1,0 +1,1666 @@
+BLUENCE PERSONAL CARBON COPILOT
+BLUENCE_PERSONAL_DESIGN_SYSTEM_V1.0
+
+Status: Authoritative consolidated specification
+Product family: PLANET-B / Bluence
+Product: Bluence Personal Carbon Copilot
+Version: 1.0
+
+PAGE 00 — DESIGN SYSTEM HOME
+
+Purpose:
+Introduce the authoritative design system and provide access to foundations, components, patterns, templates and implementation specifications.
+
+Content:
+
+- Bluence Personal design-system name and version
+- Short brand statement:
+  “Personal sustainability guidance through trustworthy data, achievable action and verified progress.”
+- Links to:
+  - Foundations
+  - Components
+  - Product patterns
+  - Page templates
+  - Accessibility
+  - Developer specifications
+- Current release notes
+- Component status:
+  - Ready
+  - Beta
+  - Under review
+  - Deprecated
+- Links to design libraries and coded components
+
+
+PAGE 01 — DESIGN PRINCIPLES
+
+Purpose:
+Define the behavioral and visual principles governing every interface decision.
+
+Content:
+
+1. Personal, not judgmental
+2. Evidence-aware, not falsely precise
+3. Progress-oriented, not guilt-oriented
+4. AI-assisted, not AI-controlled
+5. Reduction before contribution
+6. Clear about estimates and uncertainty
+7. Consistent across dark and light modes
+8. Accessible without depending on color or icon recognition
+9. Compact but readable
+10. Connected to the main Bluence product family
+
+Visual direction:
+
+- Premium eco-futuristic character
+- Dark fig foundations
+- Aqua and olive progress signals
+- Violet-to-blue AI identity
+- Rounded, layered surfaces
+- Restrained environmental symbolism
+- Clear separation between estimated, planned, completed and verified states
+
+Extended visual character:
+
+- The interface must feel intelligent and data-driven without appearing clinical.
+- Environmental identity is expressed through color, progress, verified-impact states and restrained leaf motifs rather than excessive green imagery.
+- Dark fig-purple is the dominant brand foundation; aqua and olive function as progress and environmental accents.
+- Blue represents information, navigation and analytical content.
+- Soft gradients are reserved for AI identity, primary action, active pathways and a limited number of branded highlights.
+- Rounded layered surfaces make the personal application feel more supportive than the enterprise application while maintaining the same Bluence family identity.
+- Information density must come from hierarchy, spacing and alignment—not from reducing text below readable sizes.
+
+
+PAGE 02 — LOGO AND PRODUCT IDENTITY
+
+Purpose:
+Document the relationship between PLANET-B, Bluence and Bluence Personal.
+
+Content:
+
+- Primary Bluence logo
+- Dark-background logo
+- Light-background logo
+- Bluence Personal product lockup
+- “Personal Carbon Copilot” descriptor
+- Minimum logo size
+- Minimum clear space
+- Approved logo backgrounds
+- Prohibited logo treatments
+- App icon and favicon
+- Relationship to the main Bluence application
+- “Back to Bluence” navigation treatment
+
+Rules:
+
+- Never recolor the supplied logo arbitrarily
+- Never place the logo inside a circular action button
+- Do not use the logo as a generic navigation icon
+- Keep the Personal descriptor visually subordinate to Bluence
+
+
+PAGE 03 — COLOR SYSTEM
+
+Purpose:
+Define brand, surface, semantic and data-visualization colors.
+
+Brand colors:
+
+- Deep Fig: #180D22
+- Dark Fig: #24122F
+- Fig Surface: #3D1D4B
+- Primary Fig: #742785
+- Fig Violet: #7A3296
+- Violet Blue: #625FC2
+- Planet-B Blue: #248FF2
+- Strong Blue: #1167C1
+- Aqua: #24C9A5
+- Olive: #A7BD36
+- Light Olive: #D9EC74
+
+Dark mode:
+
+- Application background: #110A18
+- Sidebar: #160C1E
+- Primary panel: #201329
+- Secondary panel: #281732
+- Elevated surface: #311B3B
+- Primary text: #F7F5F8
+- Secondary text: #AFA3B4
+- Border: light color at approximately 12% opacity
+
+Light mode:
+
+- Application background: #F4F6E9
+- Sidebar: #FCFDF7
+- Primary panel: #FFFFFF
+- Secondary panel: #F7F8EE
+- Selected surface: #EDF1D8
+- Primary text: #25172C
+- Secondary text: #716878
+- Border: dark fig at approximately 12% opacity
+
+Semantic colors:
+
+- Verified or successful: #24C9A5
+- Environmental achievement: #D9EC74
+- Information: #248FF2
+- Warning or pending: #F3B34C
+- Critical or failed: #FF6378
+
+Category colors:
+
+- Travel: #7A3296
+- Home energy: #248FF2
+- Food: #24C9A5
+- Goods and services: #A7BD36
+- Other: #6F6575
+
+Content required for every token:
+
+- Name
+- Hex value
+- RGB value
+- Usage
+- Dark-mode example
+- Light-mode example
+- Contrast ratio
+- Prohibited combinations
+
+Color-governance rules:
+
+- Fig-purple remains the dominant product color.
+- Aqua and olive are accents and must not turn Bluence into a conventional all-green sustainability product.
+- Category colors remain stable in charts, tables, cards, tooltips and detail pages.
+- Semantic colors must retain the same meaning across dark and light modes.
+- Text, icons and data marks must be tested against their actual backgrounds rather than approved in isolation.
+- Status must never depend on color alone.
+
+Theme behavior:
+
+Dark mode is the primary expressive mode:
+
+- Dark fig backgrounds
+- White and light-olive text
+- Aqua progress indicators
+- Violet and blue AI gradients
+
+Light mode reverses the visual relationship:
+
+- Light olive-tinted application background
+- White panels
+- Dark fig typography
+- Fig and blue interactive accents
+- Aqua retained for verified progress
+
+Both themes must preserve category colors, semantic meaning, logo suitability, chart readability and accessible contrast.
+
+
+PAGE 04 — GRADIENTS
+
+Purpose:
+Define controlled uses of brand gradients.
+
+Primary action gradient:
+
+#742785 → #625FC2 → #1167C1
+
+Progress gradient:
+
+#742785 → #248FF2 → #24C9A5
+
+Copilot gradient:
+
+#742785 → #248FF2
+
+Environmental title gradient:
+
+#A7BD36 → #24C9A5 → #248FF2
+
+Content:
+
+- Gradient tokens
+- Direction and angle
+- Approved background contexts
+- Text-gradient examples
+- Circular-button examples
+- Progress-ring examples
+- Copilot identity examples
+- Accessibility fallback colors
+
+Rules:
+
+- Do not apply gradients to every component
+- Use one dominant gradient treatment per visual area
+- Do not use gradient text for instructions, warnings or essential values
+- Circular primary actions may use the primary action gradient
+- Destructive actions must not use a brand gradient
+
+
+PAGE 05 — TYPOGRAPHY
+
+Purpose:
+Combine PLANET-B’s editorial identity with readable interface typography.
+
+5.1 Page titles — Cinzel
+
+Font stack:
+
+Cinzel, Georgia, "Times New Roman", serif
+
+Usage:
+
+- One principal title per page
+- Major journey milestones
+- Selected impact statements
+- Branded empty states
+
+Style:
+
+- Desktop: 30–36 px
+- Mobile: 26–30 px
+- Weight: 600–700
+- Line height: 1.15–1.25
+- Letter spacing: 0 to 0.02em
+- Short sentence case or title case
+- Gradient text where contrast is sufficient
+
+Standard title gradient:
+
+#742785 → #625FC2 → #248FF2
+
+Fallback:
+
+- Dark mode: #D9EC74
+- Light mode: #25172C
+
+5.2 Section headings — Merriweather
+
+Font stack:
+
+Merriweather, Georgia, "Times New Roman", serif
+
+Usage:
+
+- Major section headings
+- Questionnaire introductions
+- Baseline, plan, review and reward headings
+- Selected project titles
+
+Style:
+
+- Major heading: 20–24 px
+- Panel heading: 17–20 px
+- Weight: 700
+- Line height: 1.3–1.4
+- Solid color
+- Slightly negative or normal letter spacing
+
+5.3 Body text — Poppins
+
+Font stack:
+
+Poppins, Inter, "Segoe UI", Arial, sans-serif
+
+Usage:
+
+- Explanatory content
+- Copilot messages
+- Recommendations
+- Questionnaire questions
+- Project descriptions
+- Help and privacy content
+
+Style:
+
+- Standard body: 16 px
+- Compact body: 14–15 px
+- Weight: 400
+- Emphasis: 500
+- Line height: 1.5–1.65
+- Reading width: 65–75 characters
+
+5.4 Interface and data — Inter
+
+Font stack:
+
+Inter, "Segoe UI", Roboto, Arial, sans-serif
+
+Usage:
+
+- Navigation
+- Form labels
+- Inputs
+- Tooltips
+- Button tooltips and captions
+- Tables
+- Statuses
+- Dates and units
+- Chart labels
+- KPI values
+- Carbon values
+- Token balances
+
+Style:
+
+- Interface text: 14–16 px
+- Labels: 12–14 px
+- KPI values: 28–36 px
+- Metadata: 12–13 px
+- Weight: 400–700
+- Tabular numerals enabled
+
+5.5 Eyebrow labels — Inter
+
+Style:
+
+- 12–13 px
+- Weight: 700
+- Uppercase
+- Letter spacing: 0.10–0.13em
+- Dark mode: #D9EC74
+- Light mode: #742785
+
+5.6 Typography examples
+
+The page must show:
+
+- Page-title hierarchy
+- Section-heading hierarchy
+- Panel-heading hierarchy
+- Body styles
+- Copilot response styles
+- Labels and metadata
+- KPI and number formatting
+- Tooltip text
+- Long-title behavior
+- Responsive scaling
+- Dark- and light-mode comparison
+
+5.7 Typography usage rules
+
+- Use Cinzel only for the principal page-level title or a major branded statement.
+- Use no more than one gradient title in the same viewport.
+- Do not use Cinzel for navigation, cards, forms, tables or long headings.
+- Use Merriweather for meaningful editorial and sectional hierarchy, not every minor card label.
+- Do not use Cinzel or Merriweather in all-uppercase text.
+- Use Poppins for readable, conversational and explanatory content.
+- Use Inter or Segoe UI for navigation, interaction, dense data and numerical content.
+- Carbon values, percentages and token balances use Inter with tabular numerals.
+- Gradient text is prohibited for instructions, warnings, legal content and accessibility-critical information.
+- Normal body copy must remain at least 16 px; secondary metadata must remain at least 12 px.
+- Establish hierarchy through role, weight and spacing before adding extra color.
+
+5.8 Typography signature
+
+- Cinzel provides the PLANET-B identity.
+- Merriweather provides editorial authority and warmth.
+- Poppins provides approachable, human-centered reading.
+- Inter and Segoe UI provide precision, density and interface clarity.
+
+
+PAGE 06 — ICONOGRAPHY
+
+Purpose:
+Create a consistent icon language capable of supporting icon-only controls.
+
+Visual style:
+
+- Outlined icons
+- Rounded line endings
+- Rounded corners
+- Consistent optical weight
+- Minimal internal detail
+- Recognizable at 16–24 px
+- Avoid mixing filled, sharp and outlined styles
+
+Icon sizes:
+
+- 16 px: compact controls
+- 20 px: standard circular buttons
+- 24 px: primary circular buttons
+- 28 px: floating or hero actions
+- 32 px: decorative or non-interactive symbols
+
+Required icon families:
+
+Navigation:
+
+- Today
+- Profile
+- Questionnaire
+- Footprint
+- Target
+- Plan
+- Review
+- Rewards
+- Projects
+- Settings
+- Return to Bluence
+
+Actions:
+
+- Add
+- Edit
+- Delete
+- Save
+- Confirm
+- Cancel
+- Continue
+- Back
+- Close
+- Search
+- Filter
+- Download
+- Upload
+- Share
+- Expand
+- Collapse
+- More
+- Refresh
+
+Carbon categories:
+
+- Travel
+- Flight
+- Car
+- Public transport
+- Home
+- Electricity
+- Heating
+- Food
+- Goods
+- Services
+- Waste
+
+Copilot:
+
+- Ask Copilot
+- Recommendation
+- Explanation
+- Source
+- Confidence
+- Human approval
+
+Rewards:
+
+- Token
+- Achievement
+- Wallet
+- Donate
+- Receipt
+- Verified project
+
+Icon documentation must include:
+
+- Icon name
+- Meaning
+- Approved contexts
+- Prohibited alternative meanings
+- Default size
+- Stroke width
+- Accessible label
+- Tooltip wording
+
+
+PAGE 07 — CIRCULAR BUTTON SYSTEM
+
+Purpose:
+Define the primary interaction signature of the product.
+
+Core rule:
+
+All action buttons use circular geometry and contain an icon rather than text.
+
+Button sizes:
+
+- Extra small: 32 × 32 px
+- Small: 40 × 40 px
+- Standard: 48 × 48 px
+- Large: 56 × 56 px
+- Hero or major action: 64 × 64 px
+
+Minimum interactive target:
+
+- At least 44 × 44 px
+- A 32 px visual button must sit inside a minimum 44 px hit area
+
+Icon sizes:
+
+- 32 px button: 16 px icon
+- 40 px button: 18–20 px icon
+- 48 px button: 20–24 px icon
+- 56 px button: 24 px icon
+- 64 px button: 26–28 px icon
+
+Button anatomy:
+
+- Circular container
+- Centered icon
+- Optional notification badge
+- Optional progress ring
+- Focus ring
+- Tooltip
+- Accessible name
+- Optional external caption
+
+Button variants:
+
+1. Primary circle
+
+- Fig-to-violet-to-blue gradient
+- White icon
+- Used for the primary action in a section
+- Only one primary circle in a local action group
+
+2. Secondary circle
+
+- Panel-colored background
+- Subtle border
+- Primary text-colored icon
+
+3. Tonal circle
+
+- Low-opacity semantic background
+- Semantic-colored icon
+- Used for category-specific or low-emphasis actions
+
+4. Ghost circle
+
+- Transparent background
+- Muted icon
+- Surface appears on hover
+
+5. Copilot circle
+
+- Fig-to-blue gradient
+- Spark icon
+- May use a soft outer glow
+- Reserved exclusively for AI access
+
+6. Success circle
+
+- Aqua background or aqua-tinted surface
+- Check icon
+
+7. Warning circle
+
+- Amber-tinted surface
+- Warning icon
+
+8. Destructive circle
+
+- Red-tinted surface
+- Delete or destructive icon
+- Never use brand gradient
+
+9. Floating action circle
+
+- 56–64 px
+- Fixed or sticky placement
+- Strong elevation
+- Used for the globally available Copilot
+
+10. Progress circle
+
+- Circular progress ring surrounding an action icon
+- Used for uploads, calculations or staged completion
+
+Required states:
+
+- Default
+- Hover
+- Keyboard focus
+- Pressed
+- Selected
+- Disabled
+- Loading
+- Success
+- Error
+
+Focus state:
+
+- Three-pixel aqua outer ring
+- Minimum two-pixel separation from the button edge
+- Must remain visible in both themes
+
+Loading state:
+
+- Preserve button size
+- Replace icon with progress indicator
+- Prevent repeated activation
+- Retain accessible loading text
+
+Disabled state:
+
+- Lower contrast
+- No shadow
+- Preserve icon recognizability
+- Provide an explanation when the reason is not obvious
+
+
+PAGE 08 — ICON-ONLY BUTTON USABILITY RULES
+
+Purpose:
+Prevent ambiguity and accessibility failures.
+
+Mandatory requirements:
+
+- Every button must have an accessible name
+- Every desktop button must show a tooltip on hover and keyboard focus
+- Tooltip language must describe the action, not the icon
+- Tooltips should appear after approximately 300–500 ms
+- Tooltips must not cover essential content
+- Keyboard focus order must follow task order
+- Repeated icons must always perform the same action
+- Do not use the same icon for unrelated actions
+
+Visible external captions are mandatory for:
+
+- First-time onboarding actions
+- Questionnaire progression
+- Saving or submitting data
+- Creating or changing targets
+- Confirming a baseline update
+- Verifying an achievement
+- Spending tokens
+- Confirming a donation
+- Deleting personal data
+- Any irreversible or legally meaningful action
+
+Caption pattern:
+
+[Circle icon button]
+Confirm donation
+
+The text is placed beside or below the button, but never inside it.
+
+Mobile behavior:
+
+- Do not depend on hover tooltips
+- Use persistent captions for unfamiliar actions
+- Provide onboarding hints for novel icons
+- Use an action sheet when several icons could be ambiguous
+- Do not require long press to discover meaning
+
+Critical rule:
+
+A circle containing only an icon is not sufficient when the consequence of the action is not immediately obvious.
+
+
+PAGE 09 — BUTTON GROUPS AND ACTION BARS
+
+Purpose:
+Define how circular buttons are arranged.
+
+Content:
+
+- Horizontal action group
+- Vertical action rail
+- Floating action group
+- Card action group
+- Table-row actions
+- Form action group
+- Dialog confirmation group
+- Mobile bottom action bar
+
+Spacing:
+
+- Compact gap: 8 px
+- Standard gap: 12 px
+- Major-action gap: 16 px
+
+Ordering:
+
+- Back or cancel first
+- Secondary actions next
+- Primary action last
+- Destructive action visually separated
+
+Maximum recommended visible actions:
+
+- Three in a compact card
+- Four in a page action bar
+- Additional actions move into a circular “More” menu
+
+Do not create long rows of unexplained circles.
+
+
+PAGE 10 — TOOLTIPS AND ACTION CAPTIONS
+
+Purpose:
+Provide meaning for icon-only buttons.
+
+Tooltip content:
+
+- Short action verb
+- Optional keyboard shortcut
+- Optional status or consequence
+
+Examples:
+
+- Add to plan
+- Edit target
+- Save profile
+- Download summary
+- Ask Copilot
+- Confirm contribution
+- Delete account
+
+Tooltip anatomy:
+
+- Dark or high-contrast surface
+- Poppins or Inter
+- 12–13 px
+- Maximum two lines
+- 6–8 px radius
+- Small directional pointer
+- No decorative gradient
+
+External captions:
+
+- Inter, 12–14 px
+- Medium weight
+- Centered below isolated buttons
+- Left-aligned beside buttons in confirmation flows
+- Remain visible on mobile
+
+
+PAGE 11 — SPACING, SIZING AND SHAPE
+
+Purpose:
+Define layout rhythm and component geometry.
+
+Spacing scale:
+
+- 4 px: micro-spacing
+- 8 px: icon and compact-control spacing
+- 12 px: control-group spacing
+- 16 px: standard content gap
+- 20 px: compact panel padding
+- 24 px: standard panel padding
+- 32 px: page padding
+- 40–48 px: major section spacing
+
+Corner system:
+
+- Circular buttons: 50% radius
+- Major panels: 18 px
+- Standard cards: 13–16 px
+- Inputs: 9–10 px
+- Badges: pill-shaped
+- Tooltips: 6–8 px
+- Avatars: circular
+
+Rules:
+
+- Circular geometry is reserved for actions, avatars and progress indicators
+- Do not make content cards circular
+- Do not make input fields circular
+- Do not make long status labels circular
+
+
+PAGE 12 — ELEVATION AND SURFACES
+
+Purpose:
+Define visual layering.
+
+Content:
+
+- Application background
+- Sidebar
+- Primary panel
+- Secondary panel
+- Elevated panel
+- Modal
+- Drawer
+- Tooltip
+- Floating button
+- Selected state
+
+Dark-mode shadow:
+
+- Broad black shadow
+- Approximately 25% opacity
+- 18 px vertical offset
+- Approximately 55 px blur
+
+Light-mode shadow:
+
+- Soft dark-olive shadow
+- Approximately 9–10% opacity
+
+Circular button elevation:
+
+- Primary circle: medium elevation
+- Floating circle: high elevation
+- Ghost circle: no default elevation
+- Pressed state: reduced elevation
+
+Panel specification:
+
+- Major radius: 18 px
+- Standard card radius: 13–16 px
+- Border: one pixel using the theme border token
+- Default surface: solid rather than highly transparent
+- Internal padding: 20–24 px
+- Heavy outlines are prohibited
+- Strong glassmorphism is prohibited
+- Backdrop blur is reserved for the sticky top bar, drawers and modal backdrops
+
+Highlighted panels may use only one of the following treatments:
+
+- Restrained radial fig glow
+- Low-opacity aqua tint
+- Low-opacity warning tint
+- Subtle branded gradient
+
+Do not combine every treatment in one panel.
+
+
+PAGE 13 — LAYOUT AND RESPONSIVE GRID
+
+Purpose:
+Define application structure.
+
+Desktop:
+
+- Sidebar: 248 px
+- Compact sidebar: 86 px
+- Top navigation: 74 px
+- Main content maximum: approximately 1,650 px
+- Page padding: 28–32 px
+- Standard grid gap: 14–16 px
+
+Tablet:
+
+- Icon-only sidebar
+- Two-column dashboard layouts
+- Reduced page padding
+- Compact top navigation
+
+Mobile:
+
+- Off-canvas sidebar
+- Single-column content
+- Circular action bar near the bottom edge
+- Copilot drawer becomes full width
+- Complex tables scroll horizontally
+- Primary task buttons retain external captions
+
+Document:
+
+- Breakpoints
+- Column behavior
+- Grid templates
+- Safe areas
+- Touch spacing
+- Long-content behavior
+
+
+PAGE 14 — NAVIGATION
+
+Purpose:
+Define navigation across the carbon journey.
+
+Primary destinations:
+
+- Today
+- My profile
+- Footprint check
+- My footprint
+- My plan
+- Seasonal reviews
+- Rewards and impact
+- Settings
+- Main Bluence application
+
+Desktop sidebar:
+
+- Navigation icons may be accompanied by labels in expanded mode
+- Collapsed mode uses circular icon buttons
+- Active destination uses a selected circular treatment
+- Tooltip is mandatory in collapsed mode
+
+Mobile navigation:
+
+- Circular menu trigger
+- Drawer with icons and visible destination labels
+- Current page clearly identified
+- Do not use an unexplained row of icon-only destinations on first use
+
+Additional navigation patterns:
+
+- Back circle
+- Home circle
+- Journey-step navigation
+- Breadcrumbs
+- Command palette
+- Previous and next questionnaire controls
+
+Application-shell specification:
+
+- Expanded sidebar width: 248 px
+- Collapsed sidebar width: 86 px
+- Sticky top-navigation height: 74 px
+- Main-content maximum width: approximately 1,650 px
+- Desktop page padding: 28–32 px
+- Standard grid gap: 14–16 px
+
+Expanded sidebar content:
+
+- Bluence logo
+- Personal Carbon Copilot product identifier
+- Primary destinations
+- Target-progress summary
+- Link back to the main Bluence application
+
+Top-navigation content:
+
+- Current journey or seasonal status
+- Search and command palette
+- Green-token balance
+- Theme control
+- Notifications
+- User avatar
+
+The token balance is contextual reward information and must not be presented as a speculative financial asset.
+
+
+PAGE 15 — FORMS AND QUESTIONNAIRES
+
+Purpose:
+Define data entry and assessment patterns.
+
+Content:
+
+- Text input
+- Email input
+- Numeric input
+- Select
+- Radio group
+- Checkbox
+- Range input
+- Unit input
+- Date selection
+- Consent control
+- Validation
+- Help text
+- Saved state
+- Error state
+
+Circular form actions:
+
+- Back: arrow-left icon
+- Continue: arrow-right icon
+- Save: save icon
+- Submit: check icon
+- Edit: pencil icon
+- Reset: refresh icon
+- Add: plus icon
+
+Requirements:
+
+- Primary progression icons require visible captions
+- Save and submit must use different icons
+- Form actions must remain in predictable positions
+- Validation errors must use text in addition to icons
+- Auto-save status should appear as text outside the button
+
+
+PAGE 16 — CARDS AND CONTENT CONTAINERS
+
+Purpose:
+Define reusable panel types.
+
+Required card components:
+
+- Footprint summary
+- Copilot recommendation
+- Hotspot distribution
+- Seasonal action
+- Token wallet
+- Baseline analysis
+- Target builder
+- Review summary
+- Baseline update
+- Project contribution
+- Privacy explanation
+- Empty state
+
+Card action pattern:
+
+- Circular action buttons appear in the upper-right or lower action area
+- Maximum three visible circular actions
+- Use tooltips for all actions
+- Use external captions for critical actions
+- Keep action placement consistent across cards
+
+16.1 Footprint-summary card
+
+Required content:
+
+- Annual footprint value
+- Baseline date
+- Circular progress indicator
+- Baseline-to-current-to-target trajectory
+- Reduction achieved
+- Estimate and data-quality explanation
+
+Rules:
+
+- Aqua represents completed reduction.
+- A quiet surface color represents the remaining gap.
+- An olive marker may identify the current position.
+- Original baseline, current estimate and future target must be visually and textually distinct.
+
+16.2 Copilot-recommendation card
+
+Required content:
+
+- Recommended action
+- Estimated impact
+- Reason for the recommendation
+- Confidence or feasibility
+- Relevant user context
+- Source or calculation reference
+- Add-to-plan, explain and dismiss actions
+
+Rules:
+
+- Copilot surfaces use the fig-violet-blue identity.
+- Recommendations must be visually distinct from verified facts.
+- AI output never changes a plan without human confirmation.
+
+16.3 Action-plan card
+
+Required content:
+
+- Category icon
+- Action name
+- Estimated impact
+- Timing
+- Evidence requirement
+- Status
+- Potential token reward
+
+Rules:
+
+- Checking an action complete must not imply immediate verification.
+- Completion may move an action to Pending review.
+- Tokens are awarded only after the defined verification event.
+
+16.4 Token-wallet card
+
+Required content:
+
+- Available balance
+- Pending tokens
+- Recently earned tokens
+- Recently used tokens
+- Link to the token ledger
+- Non-financial token statement
+
+16.5 Green-project card
+
+Required content:
+
+- Project category
+- Country or region
+- Delivery-partner verification
+- Short project description
+- Funding progress
+- Supporter count
+- Project-details action
+- Contribution action
+
+Category header treatments:
+
+- Wetlands: deep teal to aqua
+- Clean energy: amber to gold
+- Biodiversity: forest green to olive
+
+Project-specific colors remain secondary to the Bluence palette. Project contributions must never be presented as automatic reductions or offsets to the user's footprint.
+
+
+PAGE 17 — DATA VISUALIZATION
+
+Purpose:
+Define accurate, readable sustainability visualizations.
+
+Required visualizations:
+
+- Footprint distribution donut
+- Category stacked bar
+- Baseline-to-target trajectory
+- Progress ring
+- Regional benchmark
+- Seasonal comparison bars
+- Review timeline
+- Token ledger summary
+
+Rules:
+
+- Preserve category colors
+- Display exact values
+- Always show units
+- Show confidence and uncertainty
+- Distinguish baseline, current value and target
+- Provide non-visual descriptions
+- Do not place essential actions inside charts
+
+Chart controls:
+
+- Circular filter button
+- Circular information button
+- Circular download button
+- Circular expand button
+
+Each control requires a tooltip and accessible name.
+
+
+PAGE 18 — STATUS, FEEDBACK AND NOTIFICATIONS
+
+Purpose:
+Define how the system communicates state.
+
+Statuses:
+
+- Estimated
+- Incomplete
+- Planned
+- In progress
+- Pending review
+- Completed
+- Verified
+- Updated
+- Failed
+- Archived
+
+Components:
+
+- Status badge
+- Toast
+- Inline message
+- Alert panel
+- Notification item
+- Loading indicator
+- Empty state
+- Success confirmation
+- Error recovery
+
+Circular feedback controls:
+
+- Information icon
+- Warning icon
+- Retry icon
+- Dismiss icon
+- View details icon
+
+Do not communicate status using only a colored circle.
+
+
+PAGE 19 — COPILOT AND AI INTERACTIONS
+
+Purpose:
+Define trustworthy AI behavior and appearance.
+
+Components:
+
+- Global Copilot circular button
+- Copilot drawer
+- Context chips
+- User message
+- Copilot response
+- Recommendation card
+- Source reference
+- Confidence indicator
+- Approval control
+- Correction control
+- Feedback controls
+
+Circular actions:
+
+- Open Copilot: spark icon
+- Send: upward arrow
+- Add recommendation: plus icon
+- Approve: check icon
+- Reject: cross icon
+- Explain: information icon
+- View source: document icon
+- Regenerate: refresh icon
+- Positive feedback: thumbs-up icon
+- Negative feedback: thumbs-down icon
+
+Requirements:
+
+- AI suggestions never alter the plan automatically
+- Approval requires an explicit action
+- Recommendations show estimated impact
+- Sources or calculation context remain visible
+- Human confirmation is required for consequential changes
+
+
+PAGE 20 — PERSONAL CARBON JOURNEY PATTERNS
+
+Purpose:
+Document reusable end-to-end workflows.
+
+Patterns:
+
+1. Registration and consent
+2. Profile completion
+3. Questionnaire completion
+4. Baseline creation
+5. Hotspot exploration
+6. Target setting
+7. Copilot-assisted planning
+8. Action completion
+9. Evidence submission
+10. Seasonal review
+11. Baseline revision
+12. Reward allocation
+13. Project contribution
+
+Each pattern page should include:
+
+- User objective
+- Preconditions
+- Trigger
+- Main flow
+- Alternative flow
+- Error states
+- Success state
+- Required components
+- Circular actions and icons
+- External captions
+- Accessibility requirements
+- Analytics events
+
+
+PAGE 21 — REWARDS AND TOKEN SYSTEM
+
+Purpose:
+Define motivational components without financial misrepresentation.
+
+Content:
+
+- Token balance
+- Pending tokens
+- Earned tokens
+- Used tokens
+- Token ledger
+- Verification requirement
+- Reward eligibility
+- Achievement badges
+- Contribution history
+
+Circular actions:
+
+- Open wallet
+- View ledger
+- View reward rules
+- Use tokens
+- View receipt
+
+Required statement:
+
+“BLU tokens are in-app rewards. They have no cash value and cannot be traded or transferred.”
+
+Do not use visual language associated with cryptocurrency trading or investment products.
+
+
+PAGE 22 — GREEN PROJECTS AND CONTRIBUTIONS
+
+Purpose:
+Define project discovery and contribution patterns.
+
+Components:
+
+- Project card
+- Project category
+- Country
+- Delivery-partner verification
+- Project description
+- Funding progress
+- Supporter count
+- Project details
+- Contribution confirmation
+- Receipt
+- Funded-impact summary
+
+Circular actions:
+
+- Open project: arrow icon
+- Save project: bookmark icon
+- Contribute: leaf-plus or gift icon
+- Confirm: check icon
+- Cancel: cross icon
+- View receipt: document icon
+
+Critical requirement:
+
+The contribution confirmation control must have a visible external caption.
+
+Required statement:
+
+“This contribution supports the selected project. It does not offset or reduce your personal footprint.”
+
+
+PAGE 23 — DIALOGS, DRAWERS AND OVERLAYS
+
+Purpose:
+Define focused interactions.
+
+Components:
+
+- Confirmation dialog
+- Destructive confirmation
+- Command palette
+- Copilot drawer
+- Filter drawer
+- Mobile action sheet
+- Project-detail modal
+
+Circular dialog actions:
+
+- Confirm: check
+- Cancel: cross
+- Close: cross
+- Back: arrow-left
+- Continue: arrow-right
+
+Rules:
+
+- Consequential dialog actions require external captions
+- Do not show two identical cross icons for different meanings
+- Close and cancel must be distinguished by placement and context
+- Keyboard focus must remain inside an open dialog
+
+
+PAGE 24 — MOTION AND TRANSITIONS
+
+Purpose:
+Define functional movement.
+
+Motion durations:
+
+- Micro-interaction: 120–180 ms
+- Standard state change: 200–250 ms
+- Drawer or modal: 250–300 ms
+
+Circular-button motion:
+
+- Hover: subtle elevation or background shift
+- Pressed: slight scale reduction, approximately 0.96–0.98
+- Loading: rotating progress treatment
+- Success: icon changes to check
+- Error: color change without excessive shaking
+- Floating button: no continuous pulsing
+
+Rules:
+
+- Avoid decorative animation
+- Do not animate essential numbers continuously
+- Respect reduced-motion preferences
+- Motion must clarify state change
+
+
+PAGE 25 — ACCESSIBILITY
+
+Purpose:
+Ensure the visual signature remains usable.
+
+Requirements for circular icon-only buttons:
+
+- Accessible name through aria-label or equivalent
+- Keyboard focusability
+- Visible focus ring
+- Minimum 44 × 44 px interactive target
+- Tooltip on hover and focus
+- Persistent caption when meaning or consequence is not obvious
+- No reliance on color alone
+- Consistent icon meaning
+- Screen-reader announcement for loading and success
+- Disabled-state explanation where necessary
+
+Additional content:
+
+- Color contrast
+- Text scaling
+- Reduced motion
+- Keyboard navigation
+- Screen-reader chart summaries
+- Form-error announcements
+- Dialog focus management
+- Touch accessibility
+- Cognitive accessibility
+- Localization and RTL behavior
+
+
+PAGE 26 — CONTENT AND TERMINOLOGY
+
+Purpose:
+Standardize language throughout the product.
+
+Voice:
+
+- Calm
+- Personal
+- Specific
+- Evidence-aware
+- Encouraging
+- Non-judgmental
+- Transparent about uncertainty
+
+Preferred terms:
+
+- Estimated footprint
+- Baseline
+- Current estimate
+- Target footprint
+- Estimated impact
+- Pending review
+- Verified achievement
+- Project contribution
+- In-app reward token
+
+Avoid:
+
+- Carbon neutral, unless formally substantiated
+- Zero impact
+- Guaranteed reduction
+- Free tokens
+- Investment
+- Profit
+- Automatic offset
+- AI decision
+
+Tooltip writing rules:
+
+- Begin with an action verb
+- Use two to four words where possible
+- Describe the result, not the icon
+
+Examples:
+
+- Add to plan
+- Edit target
+- Save profile
+- Review evidence
+- Confirm contribution
+- Ask Copilot
+
+
+PAGE 27 — PAGE TEMPLATES
+
+Purpose:
+Provide reusable compositions for implementation.
+
+Templates required:
+
+1. Registration and profile page
+2. Questionnaire page
+3. Personal dashboard
+4. Footprint-analysis page
+5. Target-setting page
+6. Action-plan page
+7. Seasonal-review page
+8. Baseline-update page
+9. Rewards page
+10. Green-project marketplace
+11. Project-detail page
+12. Settings and privacy page
+13. Empty state
+14. Error state
+
+Each template should identify:
+
+- Page title typography
+- Section-heading typography
+- Main grid
+- Required cards
+- Primary circular action
+- Secondary circular actions
+- Tooltips
+- External captions
+- Mobile transformation
+- Loading and error states
+
+
+PAGE 28 — DESIGN TOKENS
+
+Purpose:
+Provide implementation-ready variables.
+
+Token groups:
+
+- Brand colors
+- Surface colors
+- Text colors
+- Semantic colors
+- Category colors
+- Gradients
+- Font families
+- Font sizes
+- Font weights
+- Line heights
+- Letter spacing
+- Spacing
+- Radii
+- Circular button sizes
+- Icon sizes
+- Borders
+- Shadows
+- Motion durations
+- Breakpoints
+- Z-index levels
+
+Circular-button tokens should include:
+
+- button-circle-xs: 32 px
+- button-circle-sm: 40 px
+- button-circle-md: 48 px
+- button-circle-lg: 56 px
+- button-circle-xl: 64 px
+- hit-target-minimum: 44 px
+- icon-xs: 16 px
+- icon-sm: 20 px
+- icon-md: 24 px
+- icon-lg: 28 px
+- focus-ring: 3 px aqua
+
+
+PAGE 29 — COMPONENT SPECIFICATIONS
+
+Purpose:
+Connect visual design with coded components.
+
+Every component specification must contain:
+
+- Component name
+- Purpose
+- Anatomy
+- Variants
+- Sizes
+- States
+- Tokens
+- Interaction behavior
+- Keyboard behavior
+- Accessible name
+- Tooltip
+- External-caption requirement
+- Responsive behavior
+- Usage examples
+- Misuse examples
+- Code status
+
+
+PAGE 30 — GOVERNANCE AND QUALITY ASSURANCE
+
+Purpose:
+Keep the system consistent as Bluence grows.
+
+Content:
+
+- Component ownership
+- Contribution process
+- Design review
+- Accessibility review
+- Code review
+- Versioning
+- Deprecation process
+- Change log
+- Cross-platform parity
+- Localization review
+- Dark/light-mode testing
+- Icon-recognition testing
+- Circular-button usability testing
+
+Release checklist:
+
+- Is the icon unambiguous?
+- Is an accessible name present?
+- Is a tooltip available?
+- Is a visible caption required?
+- Is the touch target large enough?
+- Does keyboard focus appear?
+- Is the action consistent across pages?
+- Is the action safe on first activation?
+- Does it work in both themes?
+- Does it work on mobile?
+- Is the meaning preserved in RTL layouts?
+
+
+CORE CIRCULAR-BUTTON POLICY
+
+Use icon-only circular buttons for:
+
+- Familiar navigation actions
+- Search
+- Close
+- Back
+- Add
+- Edit
+- Filter
+- Download
+- Expand
+- Open Copilot
+- Repeated card actions
+
+Use circular buttons with visible external captions for:
+
+- Register
+- Continue questionnaire
+- Submit questionnaire
+- Create baseline
+- Set target
+- Add recommendation to plan
+- Confirm action completion
+- Verify evidence
+- Update baseline
+- Spend tokens
+- Confirm contribution
+- Delete data or account
+
+Never rely on an icon-only circle without a tooltip, accessible name or contextual explanation.
